@@ -1,0 +1,51 @@
+version: '3'
+services:
+  prometheus:
+    image: 'prom/prometheus'
+    ports:
+      - 9090:9090
+    command:
+      - --config.file=/etc/prometheus/prometheus.yml
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+
+  grafana:
+    image: 'grafana/grafana'
+    ports:
+      - 3000:3000
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-clock-panel
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=123456
+      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/store_statistics.json
+    volumes:
+      - ./dashboards:/var/lib/grafana/dashboards
+      - ./provisioning:/etc/grafana/provisioning
+  backend:
+    build: .
+    ports:
+      - 8080:8080
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./Volume:/var/lib/postgresql/data
+    networks:
+      - postgres
+
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "tu.massa@hotmail.com"
+      PGADMIN_DEFAULT_PASSWORD: "postgres"
+    ports:
+      - "16543:80"
+    networks:
+      - postgres
+
+networks:
+    postgres:
+      driver: bridge
