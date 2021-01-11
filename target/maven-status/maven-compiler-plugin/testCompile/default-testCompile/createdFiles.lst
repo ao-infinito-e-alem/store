@@ -1,0 +1,4 @@
+com\example\store\domain\CategoryTest.class
+com\example\store\domain\ClientTest.class
+com\example\store\domain\ProductTest.class
+com\example\store\adapter\service\CategoryServiceTest.class
