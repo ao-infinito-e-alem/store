@@ -1,6 +1,6 @@
 package com.example.store.usecase.exception.handler;
 
-import com.example.store.adapter.repository.dto.ErrorDTO;
+import com.example.store.adapter.controller.dto.ErrorDTO;
 import com.example.store.usecase.exception.NotAcceptableException;
 import com.example.store.usecase.exception.NotFoundException;
 import org.springframework.http.HttpHeaders;

@@ -1,4 +1,4 @@
-package com.example.store.adapter.repository.dto;
+package com.example.store.adapter.controller.dto;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.example.store.adapter.repository.dto;
+package com.example.store.adapter.controller.dto;
 
 import com.example.store.adapter.controller.CategoryController;
 import com.example.store.domain.Category;

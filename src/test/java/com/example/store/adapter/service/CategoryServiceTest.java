@@ -1,6 +1,6 @@
 package com.example.store.adapter.service;
 
-import com.example.store.adapter.repository.dto.CategoryDTO;
+import com.example.store.adapter.controller.dto.CategoryDTO;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

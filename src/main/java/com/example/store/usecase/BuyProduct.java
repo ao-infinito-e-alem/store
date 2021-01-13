@@ -1,8 +1,8 @@
 package com.example.store.usecase;
 
 import com.example.store.adapter.repository.ProductRepository;
-import com.example.store.adapter.repository.dto.BuyProductInDTO;
-import com.example.store.adapter.repository.dto.BuyProductOutDTO;
+import com.example.store.adapter.controller.dto.BuyProductInDTO;
+import com.example.store.adapter.controller.dto.BuyProductOutDTO;
 import com.example.store.domain.Product;
 import com.example.store.usecase.exception.NotAcceptableException;
 import lombok.RequiredArgsConstructor;

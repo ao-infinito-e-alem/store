@@ -1,8 +1,8 @@
 package com.example.store.adapter.controller;
 
-import com.example.store.adapter.repository.dto.ProductDTO;
-import com.example.store.adapter.repository.dto.ProductInputDTO;
-import com.example.store.adapter.repository.dto.ProductDTOConverter;
+import com.example.store.adapter.controller.dto.ProductDTO;
+import com.example.store.adapter.controller.dto.ProductInputDTO;
+import com.example.store.adapter.controller.dto.ProductDTOConverter;
 import com.example.store.usecase.FindProduct;
 import com.example.store.usecase.RegisterProduct;
 import lombok.RequiredArgsConstructor;

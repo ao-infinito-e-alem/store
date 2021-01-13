@@ -1,7 +1,7 @@
 package com.example.store.adapter.controller;
 
-import com.example.store.adapter.repository.dto.CategoryDTO;
-import com.example.store.adapter.repository.dto.CategoryDTOConverter;
+import com.example.store.adapter.controller.dto.CategoryDTO;
+import com.example.store.adapter.controller.dto.CategoryDTOConverter;
 import com.example.store.usecase.FindCategory;
 import com.example.store.usecase.exception.NotFoundException;
 import lombok.RequiredArgsConstructor;

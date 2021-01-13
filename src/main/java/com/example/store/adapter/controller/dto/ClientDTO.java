@@ -1,4 +1,4 @@
-package com.example.store.adapter.repository.dto;
+package com.example.store.adapter.controller.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -12,7 +12,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ClientInputDTO extends RepresentationModel<ClientInputDTO> {
+public class ClientDTO extends RepresentationModel<ClientDTO> {
 
     private String name;
     private String cpf;

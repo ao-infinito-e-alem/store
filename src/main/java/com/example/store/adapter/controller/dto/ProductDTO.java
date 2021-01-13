@@ -1,4 +1,4 @@
-package com.example.store.adapter.repository.dto;
+package com.example.store.adapter.controller.dto;
 
 import com.example.store.domain.Category;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ProductInputDTO extends RepresentationModel<ProductInputDTO> {
+public class ProductDTO extends RepresentationModel<ProductDTO> {
 
     private String name;
     private LocalDate manufacturingDate;
