@@ -1,8 +1,8 @@
 package com.example.store.adapter.controller;
 
-import com.example.store.adapter.repository.dto.ClientDTO;
-import com.example.store.adapter.repository.dto.ClientDTOConverter;
-import com.example.store.adapter.repository.dto.ClientInputDTO;
+import com.example.store.adapter.controller.dto.ClientDTO;
+import com.example.store.adapter.controller.dto.ClientDTOConverter;
+import com.example.store.adapter.controller.dto.ClientInputDTO;
 import com.example.store.usecase.FindClient;
 import com.example.store.usecase.RegisterClient;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,7 @@
 package com.example.store.usecase;
 
-import com.example.store.adapter.repository.dto.ProductConverterToDTO;
-import com.example.store.adapter.repository.dto.ProductInputDTO;
+import com.example.store.adapter.controller.dto.ProductConverterToDTO;
+import com.example.store.adapter.controller.dto.ProductInputDTO;
 import com.example.store.adapter.repository.mapper.ProductEntityMapper;
 import com.example.store.domain.Product;
 import com.example.store.usecase.port.RegisterProductPort;

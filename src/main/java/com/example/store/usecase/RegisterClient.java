@@ -1,7 +1,7 @@
 package com.example.store.usecase;
 
-import com.example.store.adapter.repository.dto.ClientConverterToDTO;
-import com.example.store.adapter.repository.dto.ClientInputDTO;
+import com.example.store.adapter.controller.dto.ClientConverterToDTO;
+import com.example.store.adapter.controller.dto.ClientInputDTO;
 import com.example.store.adapter.repository.mapper.ClientEntityMapper;
 import com.example.store.domain.Client;
 import com.example.store.usecase.port.RegisterClientPort;
