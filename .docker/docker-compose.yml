@@ -17,7 +17,7 @@ services:
       - GF_INSTALL_PLUGINS=grafana-piechart-panel,grafana-clock-panel
       - GF_SECURITY_ADMIN_USER=admin
       - GF_SECURITY_ADMIN_PASSWORD=123456
-      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/store_statistics.json
+      - GF_DASHBOARDS_DEFAULT_HOME_DASHBOARD_PATH=/var/lib/grafana/dashboards/backend_statistics.json
     volumes:
       - ./dashboards:/var/lib/grafana/dashboards
       - ./provisioning:/etc/grafana/provisioning
@@ -39,15 +39,13 @@ services:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
       - ./volume:/var/lib/postgresql/data
 
-  pgadmin:
-    image: dpage/pgadmin4
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "tu.massa@hotmail.com"
-      PGADMIN_DEFAULT_PASSWORD: "postgres"
-    ports:
-      - "16543:80"
-    networks:
-      - postgres
+#  pgadmin:
+#    image: dpage/pgadmin4
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: "tu.massa@hotmail.com"
+#      PGADMIN_DEFAULT_PASSWORD: "postgres"
+#    ports:
+#      - "16543:80"
 
 networks:
     postgres:

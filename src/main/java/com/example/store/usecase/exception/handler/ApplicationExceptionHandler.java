@@ -1,6 +1,7 @@
 package com.example.store.usecase.exception.handler;
 
 import com.example.store.adapter.repository.dto.ErrorDTO;
+import com.example.store.usecase.exception.NotAcceptableException;
 import com.example.store.usecase.exception.NotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -17,5 +18,11 @@ public class ApplicationExceptionHandler extends ResponseEntityExceptionHandler 
     public ResponseEntity handleNotFoundException(NotFoundException e, WebRequest request) {
         return handleExceptionInternal(e,
                 new ErrorDTO("BUSINESS_ERROR", e.getMessage()), new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+    }
+
+    @ExceptionHandler(NotAcceptableException.class)
+    public ResponseEntity handleNotAcceptableException(NotAcceptableException e, WebRequest request) {
+        return handleExceptionInternal(e,
+                new ErrorDTO("BUSINESS_ERROR", e.getMessage()), new HttpHeaders(), HttpStatus.NOT_ACCEPTABLE, request);
     }
 }
